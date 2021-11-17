@@ -151,3 +151,51 @@ function SelectAnswer(answer) {
         //Move to next answer
     }
 };
+
+const questions = [ {
+    uid: 1,
+    question: 'What does HTML stand for?',
+    answers: [
+        {id: 1, text: 'Harrys Talking Monkey Language', correct: false},
+        {id: 2, text: 'Hyper-Tools Marketing Logistics', correct: false},
+        {id: 3, text: 'Hyper-Text Markup Language', correct: true},
+        {id: 4, text: 'It doesnt actually stand for anything', correct: false}
+    ] 
+}, {
+    uid: 2,
+    question: 'Strings can include:',
+    answers: [
+        {id: 1, text: 'Text', correct: false},
+        {id: 2, text: 'Numbers', correct: false},
+        {id: 3, text: 'Special Characters', correct: false},
+        {id: 4, text: 'All of the above', correct: true}
+    ] 
+}, {
+    uid: 3,
+    question: 'What is a void function?',
+    answers: [
+        {id: 1, text: 'A function that doesnt return a value', correct: true},
+        {id: 2, text: 'A function that padding to elements', correct: false},
+        {id: 3, text: 'A function that only returns hidden values', correct: false},
+        {id: 4, text: 'There is no such thing as a void function', correct: false}
+    ] 
+}, {
+    uid: 4,
+    question: 'What is the command for changing your current directory in GitBash?',
+    answers: [
+        {id: 1, text: 'ls "directoryname"', correct: false},
+        {id: 2, text: 'cd "directoryname"', correct: true},
+        {id: 3, text: 'change-directory "directoryname"', correct: false},
+        {id: 4, text: 'pwd "directoryname"', correct: false}
+    ] 
+}, {
+    uid: 5,
+    question: 'What values does a boolean operator return?',
+    answers: [
+        {id: 1, text: 'Strings', correct: false},
+        {id: 2, text: 'True/False values', correct: true},
+        {id: 3, text: 'Numbers', correct: false},
+        {id: 4, text: 'Page values', correct: false}
+    ] 
+}
+]
