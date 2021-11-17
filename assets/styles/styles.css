@@ -1,0 +1,47 @@
+*, 
+*::before, 
+*::after {
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+
+#time-left {
+    position: absolute;
+    right: 10px;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+#coding-quiz-title, #start-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#description-paragraph {
+    text-align: center;
+}
+
+.container {
+    width: 800px;
+    max-width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20%;
+}
+
+#question {
+    font-size: 36px;
+    font-weight: bold;
+}
