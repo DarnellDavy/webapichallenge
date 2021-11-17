@@ -95,3 +95,59 @@ function DisplayHighScores() {
     highScorePage.classList.remove('hidden');
     highScores.innerHTML = UserSubmit();
 }
+
+function RestartQuiz() {
+    questionPage.classList.add('hidden');
+    resultsPage.classList.add('hidden');
+    highScorePage.classList.add('hidden');
+    startPage.classList.remove('hidden');
+    correctAnswers = 0;
+}
+
+function Answer1() {
+    SelectAnswer(1);
+}
+
+function Answer2() {
+    SelectAnswer(2);
+}
+
+function Answer3() {
+    SelectAnswer(3);
+}
+
+function Answer4() {
+    SelectAnswer(4);
+}
+
+function SelectAnswer(answer) {
+    var question = questions[currentQuestion];
+    if (answer < 1 || answer > 4)
+    {
+        alert("Error!");
+        return;
+    }
+    var isCorrect = question.answers[answer-1].correct;
+
+    if (isCorrect == true) {
+        correctAnswers++;
+        answerResult.classList.remove('hidden');
+        answerResult.innerHTML = "Correct!";
+    } else {
+        answerResult.classList.remove('hidden');
+        answerResult.innerHTML = "Wrong!";
+    }
+
+    currentQuestion++;
+    if (currentQuestion >= numQuestions) {
+        return EndQuiz();
+    }
+    else {
+        questionLabel.innerHTML = questions[currentQuestion].question;
+        A1Button.innerHTML = questions[currentQuestion].answers[0].text;
+        A2Button.innerHTML = questions[currentQuestion].answers[1].text;
+        A3Button.innerHTML = questions[currentQuestion].answers[2].text;
+        A4Button.innerHTML = questions[currentQuestion].answers[3].text;
+        //Move to next answer
+    }
+};
